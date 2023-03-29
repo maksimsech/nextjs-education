@@ -1,4 +1,6 @@
 import SuperJSON from 'superjson'
+import { MutationCache, QueryCache } from '@tanstack/react-query'
+
 import { httpBatchLink, loggerLink } from '@trpc/client'
 import { createTRPCNext } from '@trpc/next'
 import type { AppRouter } from '@back/trpc'
@@ -24,9 +26,24 @@ function getBaseUrl() {
 export const trpc = createTRPCNext<AppRouter>({
     config({ ctx }) {
         return {
+            queryClientConfig: {
+                queryCache: new QueryCache({
+                    onError(error) {
+                        // TODO: Notification might be added there
+                        console.log('error', error)
+                    },
+                }),
+                mutationCache: new MutationCache({
+                    onError(error) {
+                        // TODO: Notification might be added there
+                        console.log('error', error)
+                    }
+                }),
+            },
             transformer: SuperJSON,
             links: [
                 loggerLink({
+                    // TODO: Or there
                     enabled: () => process.env.NODE_ENV === 'development' && typeof window !== 'undefined'
                 }),
                 httpBatchLink({
@@ -35,5 +52,5 @@ export const trpc = createTRPCNext<AppRouter>({
             ],
         }
     },
-    ssr: false,
+    ssr: false, // fully migrate to tRPC to use it (read docs)
 })

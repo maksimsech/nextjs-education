@@ -41,7 +41,7 @@ export function CommentForm({
     const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
-        await context.client.comment.create.mutate({
+        const result = await context.client.comment.create.mutate({
             text,
             author,
             eventId: event.id,
