@@ -1,0 +1,13 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "baseUrl": ".",
+      "incremental": true,
+    },
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@models": ["./models"],
+      "@models/*": ["./models/*"],
+      "@back/*": ["./back/*"]
+    }
+}
