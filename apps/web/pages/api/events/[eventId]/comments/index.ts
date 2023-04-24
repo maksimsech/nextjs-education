@@ -3,8 +3,8 @@ import { SuperJSONResult } from 'superjson/dist/types'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 import { addComment } from '@back/data/comments-repository'
-import { createCommentFrom } from '@models/factories'
-import { Comment } from '@models'
+import { createCommentFrom } from '@your-spot/contracts/factories'
+import { Comment } from '@your-spot/contracts'
 
 
 export default async function handler(

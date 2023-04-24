@@ -5,6 +5,7 @@ const webpackNodeExternals = require('webpack-node-externals')
 
 const nextConfig = {
     reactStrictMode: true,
+    transpilePackages: ['@your-spot/contracts', '@your-spot/database'],
     webpack: (config, options) => {
         patchWebpackConfig(config, options)
 
