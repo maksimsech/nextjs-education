@@ -6,8 +6,6 @@
       "composite": true,
       "paths": {
         "@components/*": ["./components/*"],
-        "@models": ["./models"],
-        "@models/*": ["./models/*"],
         "@back/*": ["./back/*"]
       }
     },

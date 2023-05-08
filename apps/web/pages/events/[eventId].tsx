@@ -1,12 +1,12 @@
+import { getEventByIdAsync, getFeaturedEventsAsync } from '@back/data/events-repository'
+import { CommentsSection } from '@components/comments/comments-section'
+import { PageTitle } from '@components/common'
+import { EventItem } from '@components/events/event-item'
+import { Comment, Event } from '@prisma/client'
 import type { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
 import { useRouter } from 'next/router'
-import { Comment, Event } from '@prisma/client'
 
-import { getEventByIdAsync, getFeaturedEventsAsync } from '@back/data/events-repository'
 import { createCommentFrom, createEventFrom } from '@your-spot/contracts/factories'
-import { EventItem } from '@components/events/event-item'
-import { PageTitle } from '@components/common'
-import { CommentsSection } from '@components/comments/comments-section'
 
 
 interface EventPageProps {

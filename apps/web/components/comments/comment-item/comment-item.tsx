@@ -1,7 +1,7 @@
-import classNames from 'classnames'
 import { Divider } from '@mui/material'
+import classNames from 'classnames'
 
-import { Comment } from 'models'
+import { Comment } from '@your-spot/contracts'
 
 import './comment-item.scss'
 

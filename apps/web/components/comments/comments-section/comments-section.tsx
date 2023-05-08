@@ -1,4 +1,4 @@
-import { Comment, Event } from '@models'
+import { Comment, Event } from '@your-spot/contracts'
 
 import { CommentForm } from '../comment-form'
 import { CommentItem } from '../comment-item'
