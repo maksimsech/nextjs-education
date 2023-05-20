@@ -4,6 +4,9 @@
         "plugin:import/recommended",
         "plugin:import/typescript"
     ],
+    "plugins": [
+        "import-newlines"
+    ],
     "env": {
         "browser": true,
         "node": true
@@ -64,6 +67,9 @@
             "ImportDeclaration": { "multiline": true, "minProperties": 2 },
             "ExportDeclaration": { "multiline": true, "minProperties": 2 }
         }],
+        "import-newlines/enforce": ["error", 1],
+        "comma-dangle": ["error", "always-multiline"],
+        "no-trailing-spaces": "error",
         "semi": ["error", "never"],
         "no-multi-spaces": ["error"],
         "no-duplicate-imports": ["error"],
