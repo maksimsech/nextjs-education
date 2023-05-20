@@ -1,0 +1,15 @@
+{
+  "name": "@your-spot/contracts",
+  "author": "Maksim Sech",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./factories": {
+      "default": "./src/factories/index.ts"
+    }
+  },
+  "private": true
+}
