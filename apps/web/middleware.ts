@@ -1,11 +1,14 @@
-import { NextResponse, type NextRequest } from 'next/server'
+import {
+    NextResponse,
+    type NextRequest,
+} from 'next/server'
 
 // TODO: Useless here. Can be removed.
 // import 'superjson-config'
 
 
 export function middleware(request: NextRequest) {
-    console.log('before next')
+    console.log('before next', request)
 
     NextResponse.next()
 

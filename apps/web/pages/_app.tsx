@@ -1,9 +1,9 @@
 import type { AppProps } from 'next/app'
 
-import { LayoutContainer } from 'components/layout/layout-container'
-import { PageTitle } from 'components/common'
+import { PageTitle } from '@components/common'
+import { LayoutContainer } from '@components/layout/layout-container'
 
-import { trpc } from 'trpc'
+import { trpc } from '../trpc'
 
 import '../styles/globals.scss'
 

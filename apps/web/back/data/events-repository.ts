@@ -3,7 +3,7 @@ import { client } from '@your-spot/database'
 
 export const getFeaturedEventsAsync = () => client.event.findMany({
     where: {
-        isFeatured: true
+        isFeatured: true,
     },
 })
 
@@ -11,11 +11,11 @@ export const getEventsAsync = () => client.event.findMany()
 
 export const getEventByIdAsync = (id: string) => client.event.findUnique({
     where: {
-        id
+        id,
     },
     include: {
         comments: true,
-    }
+    },
 })
 
 type EventFilter = {
@@ -32,6 +32,6 @@ export const getEventsFilteredByDate = ({ year, month }: EventFilter) => client.
                 month: { $month: 'date' },
             },
         },
-        { $match : { 'month' : month, 'year': year } }
+        { $match : { 'month' : month, 'year': year } },
     ],
 })

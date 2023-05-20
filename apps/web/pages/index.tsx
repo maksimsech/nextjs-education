@@ -1,8 +1,8 @@
 import { Event } from '@prisma/client'
 import { GetStaticProps } from 'next'
 
-import { EventList } from '@components/events/event-list'
 import { getFeaturedEventsAsync } from '@back/data/events-repository'
+import { EventList } from '@components/events/event-list'
 import { createEventFrom } from '@your-spot/contracts/factories'
 
 
@@ -20,25 +20,13 @@ export default function IndexPage({ events: prismaEvents }: IndexPageProps) {
     )
 }
 
-
 export const getStaticProps: GetStaticProps<IndexPageProps> = async () => {
     const events = await getFeaturedEventsAsync()
 
     return {
         props: {
-            events
+            events,
         },
         revalidate: 15,
     }
 }
-
-
-// export const getServerSideProps: GetServerSideProps<IndexPageProps> = async () => {
-//     const events = await getFeaturedEventsAsync()
-
-//     return {
-//         props: {
-//             events
-//         }
-//     }
-// }

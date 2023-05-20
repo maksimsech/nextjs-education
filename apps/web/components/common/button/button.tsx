@@ -1,4 +1,5 @@
 import { PropsWithChildren } from 'react'
+
 import classNames from 'classnames'
 import Link from 'next/link'
 
@@ -17,8 +18,8 @@ export function Button({
 }: ButtonProps) {
     return (
         <Link
-            className={classNames('button', className)}
             href={link}
+            className={classNames('button', className)}
             passHref
         >
             {children}

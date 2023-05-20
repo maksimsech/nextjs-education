@@ -1,12 +1,25 @@
-import { getEventByIdAsync, getFeaturedEventsAsync } from '@back/data/events-repository'
+import {
+    Comment,
+    Event,
+} from '@prisma/client'
+import type {
+    GetStaticPaths,
+    GetStaticProps,
+    GetStaticPropsContext,
+} from 'next'
+import { useRouter } from 'next/router'
+
+import {
+    getEventByIdAsync,
+    getFeaturedEventsAsync,
+} from '@back/data/events-repository'
 import { CommentsSection } from '@components/comments/comments-section'
 import { PageTitle } from '@components/common'
 import { EventItem } from '@components/events/event-item'
-import { Comment, Event } from '@prisma/client'
-import type { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next'
-import { useRouter } from 'next/router'
-
-import { createCommentFrom, createEventFrom } from '@your-spot/contracts/factories'
+import {
+    createCommentFrom,
+    createEventFrom,
+} from '@your-spot/contracts/factories'
 
 
 interface EventPageProps {
@@ -52,7 +65,7 @@ export const getStaticProps: GetStaticProps<EventPageProps> = async (context: Ge
     return {
         props: {
             event: event!,
-            comments: event!.comments,
+            comments: event?.comments || [],
         },
         notFound: !event,
         revalidate: 5,

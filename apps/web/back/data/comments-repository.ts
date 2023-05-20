@@ -15,5 +15,5 @@ export const addComment = async (comment: CommentCreateRequest) => {
 export const getCommentsByEventId = (eventId: string) => client.comment.findMany({
     where: {
         eventId,
-    }
+    },
 })

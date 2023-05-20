@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const { patchWebpackConfig } = require('next-global-css')
-const webpackNodeExternals = require('webpack-node-externals')
+// const webpackNodeExternals = require('webpack-node-externals')
 
 
 const nextConfig = {

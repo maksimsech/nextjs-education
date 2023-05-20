@@ -1,6 +1,9 @@
 import SuperJSON from 'superjson'
 
-import { Comment, Event } from '@your-spot/contracts'
+import {
+    Comment,
+    Event,
+} from '@your-spot/contracts'
 
 
 SuperJSON.registerCustom<Event, string>(

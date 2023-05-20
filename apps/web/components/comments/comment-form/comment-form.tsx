@@ -1,9 +1,19 @@
-import { FormEvent, useState } from 'react'
-import SuperJSON from 'superjson'
-import { Button, TextField } from '@mui/material'
+import {
+    FormEvent,
+    useState,
+} from 'react'
 
+import {
+    Button,
+    TextField,
+} from '@mui/material'
+import SuperJSON from 'superjson'
+
+import {
+    Comment,
+    Event,
+} from '@your-spot/contracts'
 import { trpc } from 'trpc'
-import { Comment, Event } from 'models'
 
 import './comment-form.scss'
 
@@ -21,6 +31,7 @@ export function CommentForm({
     const [text, setText] = useState('')
 
     const context = trpc.useContext()
+    // eslint-disable-next-line no-unused-vars
     async function updateViaFetch() {
         const response = await fetch(`/api/events/${event.id}/comments`,{
             method: 'POST',
@@ -29,18 +40,20 @@ export function CommentForm({
                 author,
             }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
         })
 
         const textResponse = await response.text()
 
+        // eslint-disable-next-line no-unused-vars
         const comment = SuperJSON.parse<{ comment: Comment}>(textResponse)
     }
 
     const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
+        // eslint-disable-next-line no-unused-vars
         const result = await context.client.comment.create.mutate({
             text,
             author,
@@ -56,7 +69,8 @@ export function CommentForm({
     return (
         <form
             className='comment-form'
-            onSubmit={handleFormSubmit}>
+            onSubmit={handleFormSubmit}
+        >
             <TextField
                 value={author}
                 onChange={e => setAuthor(e.target.value)}

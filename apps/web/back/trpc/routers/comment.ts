@@ -1,10 +1,11 @@
-import yup from 'Yup'
+import yup from 'yup'
 
 import { addComment as createComment } from '@back/data/comments-repository'
-import { Event } from '@your-spot/contracts'
-// import { createCommentFrom } from '@your-spot/contracts/factories'
 
-import { router, publicProcedure } from '../trpc'
+import {
+    router,
+    publicProcedure,
+} from '../trpc'
 
 
 export const commentRouter = router({
@@ -17,6 +18,6 @@ export const commentRouter = router({
         .mutation(async ({ input }) => {
             const comment = await createComment(input)
 
-            return comment// createCommentFrom(comment)
+            return comment // createCommentFrom(comment)
         }),
 })

@@ -8,6 +8,6 @@ const t = initTRPC.create({
     transformer: SuperJSON,
 })
 
-export const router = t.router
-export const middleware = t.middleware
+export const { router } = t
+export const { middleware } = t
 export const publicProcedure = t.procedure
