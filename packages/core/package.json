@@ -1,0 +1,14 @@
+{
+  "name": "@your-spot/core",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "author": "Maksim Sech",
+  "private": "true",
+  "dependencies": {
+    "@your-spot/contracts": "*",
+    "@your-spot/database": "*"
+  },
+  "devDependencies": {
+    "typescript": "4.9.4"
+  }
+}
