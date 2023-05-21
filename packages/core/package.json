@@ -8,6 +8,9 @@
     },
     "./creators": {
       "default": "./src/creators/index.ts"
+    },
+    "./data": {
+      "default": "./src/data/index.ts"
     }
   },
   "author": "Maksim Sech",

@@ -9,9 +9,8 @@ import {
 import { createTRPCNext } from '@trpc/next'
 import SuperJSON from 'superjson'
 
-import type { AppRouter } from 'back/trpc'
-
-import 'superjson-config'
+import type { AppRouter } from '@your-spot/api'
+import '@your-spot/api/superjson-config'
 
 
 function getBaseUrl() {

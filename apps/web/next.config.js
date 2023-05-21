@@ -1,11 +1,22 @@
 /** @type {import('next').NextConfig} */
-const { patchWebpackConfig } = require('next-global-css')
+// /** @type {import('node:fs')} */
+// const fs = require('node:fs')
+
+const {patchWebpackConfig} = require('next-global-css')
 // const webpackNodeExternals = require('webpack-node-externals')
 
 
 const nextConfig = {
     reactStrictMode: true,
-    transpilePackages: ['@your-spot/contracts', '@your-spot/database'],
+    transpilePackages: [
+        // TODO: Check how it works bcs it looks buggy
+        // Also might look better, smth like dir('packages').getFolders().map(f => `@your-spot/${f.name}`)
+        // or with package.json
+        '@your-spot/contracts',
+        '@your-spot/database',
+        '@your-spot/api',
+        '@your-spot/core',
+    ],
     webpack: (config, options) => {
         patchWebpackConfig(config, options)
 

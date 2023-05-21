@@ -1,7 +1,3 @@
-import {
-    Comment,
-    Event,
-} from '@prisma/client'
 import type {
     GetStaticPaths,
     GetStaticProps,
@@ -9,10 +5,6 @@ import type {
 } from 'next'
 import { useRouter } from 'next/router'
 
-import {
-    getEventByIdAsync,
-    getFeaturedEventsAsync,
-} from '@back/data/events-repository'
 import { CommentsSection } from '@components/comments/comments-section'
 import { PageTitle } from '@components/common'
 import { EventItem } from '@components/events/event-item'
@@ -20,6 +12,14 @@ import {
     createCommentFrom,
     createEventFrom,
 } from '@your-spot/core/creators'
+import {
+    getEventByIdAsync,
+    getFeaturedEventsAsync,
+} from '@your-spot/core/data'
+import {
+    Comment,
+    Event,
+} from '@your-spot/database'
 
 
 interface EventPageProps {
