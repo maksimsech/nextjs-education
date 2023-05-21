@@ -1,17 +1,9 @@
 {
   "name": "@your-spot/core",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
   "exports": {
-    ".": {
-      "default": "./src/index.ts"
-    },
-    "./creators": {
-      "default": "./src/creators/index.ts"
-    },
-    "./data": {
-      "default": "./src/data/index.ts"
-    }
+    ".": "./src/index.ts",
+    "./creators": "./src/creators/index.ts",
+    "./data": "./src/data/index.ts"
   },
   "author": "Maksim Sech",
   "private": true,

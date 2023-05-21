@@ -1,14 +1,8 @@
 {
   "name": "@your-spot/api",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
   "exports": {
-    ".": {
-      "default": "./src/index.ts"
-    },
-    "./superjson-config": {
-      "default": "./src/superjson-config.ts"
-    }
+    ".": "./src/index.ts",
+    "./superjson-config": "./src/superjson-config.ts"
   },
   "author": "Maksim Sech",
   "private": true,
