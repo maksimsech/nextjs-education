@@ -1,6 +1,5 @@
 {
-  "name": "your-spot",
-  "version": "0.1.0",
+  "name": "@your-spot/web",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -13,7 +12,6 @@
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.4",
     "@next/font": "13.1.1",
-    "@prisma/client": "^4.9.0",
     "@tanstack/react-query": "^4.28.0",
     "@trpc/next": "^10.18.0",
     "@trpc/react-query": "^10.18.0",
@@ -31,12 +29,11 @@
     "superjson": "^1.12.2",
     "yup": "^1.0.2",
     "@your-spot/database": "*",
-    "@your-spot/contracts": "*"
+    "@your-spot/contracts": "*",
+    "@your-spot/core": "*"
   },
   "devDependencies": {
     "typescript": "4.9.4",
-    "prisma": "^4.9.0",
-    "sass": "^1.57.1",
-    "webpack-node-externals": "^3.0.0"
+    "sass": "^1.57.1"
   }
 }

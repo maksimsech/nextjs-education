@@ -2,8 +2,19 @@
   "name": "@your-spot/core",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./creators": {
+      "default": "./src/creators/index.ts"
+    }
+  },
   "author": "Maksim Sech",
-  "private": "true",
+  "private": true,
+  "scripts": {
+    "lint": "eslint \"src/**/*.ts\""
+  },
   "dependencies": {
     "@your-spot/contracts": "*",
     "@your-spot/database": "*"

@@ -7,7 +7,7 @@ import { SuperJSONResult } from 'superjson/dist/types'
 
 import { addComment } from '@back/data/comments-repository'
 import { Comment } from '@your-spot/contracts'
-import { createCommentFrom } from '@your-spot/contracts/factories'
+import { createCommentFrom } from '@your-spot/core/creators'
 
 
 export default async function handler(

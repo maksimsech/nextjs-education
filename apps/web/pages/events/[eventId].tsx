@@ -19,7 +19,7 @@ import { EventItem } from '@components/events/event-item'
 import {
     createCommentFrom,
     createEventFrom,
-} from '@your-spot/contracts/factories'
+} from '@your-spot/core/creators'
 
 
 interface EventPageProps {
