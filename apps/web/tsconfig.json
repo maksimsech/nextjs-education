@@ -1,13 +1,18 @@
 {
-    "extends": "../../tsconfig.json",
+    "extends": "../../tsconfig.base.json",
     "compilerOptions": {
         "baseUrl": ".",
         "incremental": true,
         "composite": true,
         "paths": {
-            "@components/*": ["./components/*"],
-            "@back/*": ["./back/*"]
+            "@components/*": [
+                "./components/*"
+            ],
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx"
+    ],
 }

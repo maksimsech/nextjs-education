@@ -1,0 +1,19 @@
+{
+  "name": "@your-spot/api",
+  "exports": {
+    ".": "./src/index.ts",
+    "./superjson-config": "./src/superjson-config.ts"
+  },
+  "author": "Maksim Sech",
+  "private": true,
+  "dependencies": {
+    "@trpc/server": "^10.18.0",
+    "superjson": "^1.12.2",
+    "yup": "^1.0.2",
+    "@your-spot/core": "*",
+    "@your-spot/contracts": "*"
+  },
+  "devDependencies": {
+    "typescript": "4.9.4"
+  }
+}

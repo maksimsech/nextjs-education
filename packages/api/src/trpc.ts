@@ -1,7 +1,7 @@
 import { initTRPC } from '@trpc/server'
 import SuperJSON from 'superjson'
 
-import 'superjson-config'
+import './superjson-config'
 
 
 const t = initTRPC.create({

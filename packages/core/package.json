@@ -1,0 +1,20 @@
+{
+  "name": "@your-spot/core",
+  "exports": {
+    ".": "./src/index.ts",
+    "./creators": "./src/creators/index.ts",
+    "./data": "./src/data/index.ts"
+  },
+  "author": "Maksim Sech",
+  "private": true,
+  "scripts": {
+    "lint": "eslint \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "@your-spot/contracts": "*",
+    "@your-spot/database": "*"
+  },
+  "devDependencies": {
+    "typescript": "4.9.4"
+  }
+}

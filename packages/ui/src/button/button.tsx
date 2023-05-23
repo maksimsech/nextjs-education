@@ -1,26 +1,33 @@
-import { PropsWithChildren } from 'react'
+import {
+    PropsWithChildren,
+    ElementType,
+} from 'react'
 
 import classNames from 'classnames'
-import Link from 'next/link'
 
 import './button.scss'
 
 
 interface ButtonProps extends PropsWithChildren {
     className?: string
-    link: string
+    href: string,
+    component?: ElementType<{ href: string, className: string } & any>
 }
 
 export function Button({
     className,
-    link,
+    href,
+    component,
     children,
+    ...restProps
 }: ButtonProps) {
+    const Link = component || 'a'
+
     return (
         <Link
-            href={link}
+            href={href}
             className={classNames('button', className)}
-            passHref
+            {...restProps}
         >
             {children}
         </Link>

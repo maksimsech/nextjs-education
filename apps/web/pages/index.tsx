@@ -1,9 +1,9 @@
 import { Event } from '@prisma/client'
 import { GetStaticProps } from 'next'
 
-import { getFeaturedEventsAsync } from '@back/data/events-repository'
 import { EventList } from '@components/events/event-list'
-import { createEventFrom } from '@your-spot/contracts/factories'
+import { createEventFrom } from '@your-spot/core/creators'
+import { getFeaturedEventsAsync } from '@your-spot/core/data'
 
 
 interface IndexPageProps {

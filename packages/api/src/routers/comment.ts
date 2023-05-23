@@ -1,6 +1,6 @@
-import yup from 'yup'
+import * as yup from 'yup'
 
-import { addComment as createComment } from '@back/data/comments-repository'
+import { addComment as createComment } from '@your-spot/core/data'
 
 import {
     router,
