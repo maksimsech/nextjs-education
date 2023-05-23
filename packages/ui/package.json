@@ -1,0 +1,18 @@
+{
+  "name": "@your-spot/ui",
+  "exports": "./src/index.ts",
+  "author": "Maksim Sech",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.4",
+    "react": "^18.2.0",
+    "@types/react": "18.0.26",
+    "classnames": "^2.3.2"
+  },
+  "devDependencies": {
+    "typescript": "4.9.4",
+    "sass": "^1.57.1"
+  }
+}

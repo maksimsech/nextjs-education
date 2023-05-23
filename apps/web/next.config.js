@@ -16,6 +16,7 @@ const nextConfig = {
         '@your-spot/database',
         '@your-spot/api',
         '@your-spot/core',
+        '@your-spot/ui',
     ],
     webpack: (config, options) => {
         patchWebpackConfig(config, options)
