@@ -1,6 +1,9 @@
 {
   "name": "@your-spot/ui",
-  "exports": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./helpers": "./src/helpers/index.ts"
+  },
   "author": "Maksim Sech",
   "private": true,
   "dependencies": {

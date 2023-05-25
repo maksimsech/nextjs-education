@@ -26,7 +26,7 @@ export function Button({
     return (
         <Link
             href={href}
-            className={classNames('button', className)}
+            className={classNames('ys-button', className)}
             {...restProps}
         >
             {children}
