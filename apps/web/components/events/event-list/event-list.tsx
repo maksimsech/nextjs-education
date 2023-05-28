@@ -1,4 +1,4 @@
-import { Event } from 'models'
+import { Event } from '@your-spot/contracts'
 
 import { EventItem } from '../event-item'
 
@@ -19,7 +19,7 @@ export function EventList({ events }: EventListProps) {
                 >
                     <EventItem
                         event={e}
-                        showGoTo // change to component as prop with link 
+                        showGoTo // change to component as prop with link
                     />
                 </li>
             ))}
