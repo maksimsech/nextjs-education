@@ -15,10 +15,8 @@ export async function withSession<T = any>(
     context: GetServerSidePropsContext,
     result: GetServerSidePropsResult<T>): Promise<GetServerSidePropsResult<T & {
     session?: Session | null
-}>>
-{
-    // @ts-ignore
-    if (!(result in props)) {
+}>> {
+    if (!('props' in result)) {
         // @ts-ignore
         result.props = {}
     }
