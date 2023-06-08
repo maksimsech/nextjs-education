@@ -5,7 +5,7 @@ import {
 
 import classNames from 'classnames'
 
-import './button.scss'
+import './link-button.scss'
 
 
 interface ButtonProps extends PropsWithChildren {
@@ -14,7 +14,7 @@ interface ButtonProps extends PropsWithChildren {
     component?: ElementType<{ href: string, className: string } & any>
 }
 
-export function Button({
+export function LinkButton({
     className,
     href,
     component,
