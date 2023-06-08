@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Event } from '@your-spot/contracts'
-import { Button } from '@your-spot/ui'
+import { LinkButton } from '@your-spot/ui'
 
 import './event-item.scss'
 
@@ -37,9 +37,9 @@ export function EventItem({ event, showGoTo = false }: EventItemProps) {
                 </div>
                 {showGoTo && (
                     <div>
-                        <Button href={link} component={Link}>
+                        <LinkButton href={link} component={Link}>
                             Go to event
-                        </Button>
+                        </LinkButton>
                     </div>
                 )}
             </div>

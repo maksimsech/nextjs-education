@@ -4,8 +4,12 @@
         "baseUrl": ".",
         "incremental": true,
         "composite": true,
+        // TODO: Move to imports in package.json
         "paths": {
-            "@components/*": [
+            ":auth/*": [
+                "./auth/*"
+            ],
+            ":components/*": [
                 "./components/*"
             ],
         }

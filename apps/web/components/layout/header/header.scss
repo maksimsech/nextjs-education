@@ -1,7 +1,14 @@
 .header {
     display: flex;
     gap: 10px;
-    background-color: blue;
+    align-items: center;
+    justify-content: space-between;
     height: 75px;
     align-items: middle;
+    border-bottom: 3px red solid;
+
+    &__links {
+        display: flex;
+        gap: 16px;
+    }
 }

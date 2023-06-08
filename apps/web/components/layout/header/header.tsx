@@ -12,7 +12,13 @@ export function Header() {
                 My cool project
             </Link>
             <nav className='header__links'>
-                <Link href='events'>
+                <Link href='/auth/sign-in'>
+                    Sign in
+                </Link>
+                <Link href='/auth/sign-up'>
+                    Sign up
+                </Link>
+                <Link href='/events'>
                     All events
                 </Link>
             </nav>
