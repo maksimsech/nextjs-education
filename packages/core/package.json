@@ -3,7 +3,8 @@
   "exports": {
     ".": "./src/index.ts",
     "./creators": "./src/creators/index.ts",
-    "./data": "./src/data/index.ts"
+    "./data": "./src/data/index.ts",
+    "./services": "./src/data/index.ts"
   },
   "author": "Maksim Sech",
   "private": true,

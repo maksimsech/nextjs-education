@@ -1,19 +1,20 @@
 import { client } from '@your-spot/database'
 
 
-interface CommentCreateRequest {
+interface CommentCreate {
     text: string
     author: string
     eventId: string
 }
 
-export const addComment = async (comment: CommentCreateRequest) => {
-    const createdComment = await client.comment.create({ data: comment })
-    return createdComment
+export function addComment(comment: CommentCreate) {
+    return client.comment.create({ data: comment })
 }
 
-export const getCommentsByEventId = (eventId: string) => client.comment.findMany({
-    where: {
-        eventId,
-    },
-})
+export function getCommentsByEventId(eventId: string) {
+    return client.comment.findMany({
+        where: {
+            eventId,
+        },
+    })
+}
