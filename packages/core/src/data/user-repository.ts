@@ -5,8 +5,24 @@ type UserCreate = {
     password: string,
 }
 
+type UpdateUserPassword = {
+    id: string,
+    password: string,
+}
+
 export function createUser(user: UserCreate) {
     return client.user.create({ data: user })
+}
+
+export function updateUserPassword(user: UpdateUserPassword) {
+    return client.user.update({
+        where: {
+            id: user.id,
+        },
+        data: {
+            password: user.password,
+        },
+    })
 }
 
 export function findUserByEmail(email: string) {

@@ -4,18 +4,19 @@ import {
 } from 'next'
 
 import { getServerSideSession } from ':auth/helpers'
-import { SignUp } from ':components/auth/sign-up'
+import { ChangePassword } from ':components/auth/change-password'
 
 
-export default function SignUpPage() {
+export default function ChangePasswordPage() {
     return (
-        <SignUp />
+        <ChangePassword />
     )
 }
 
+// TODO: To common logic (I have helpers haha)
 export async function getServerSideProps(context: GetServerSidePropsContext): Promise<GetServerSidePropsResult<{}>> {
     const session = await getServerSideSession(context.req, context.res)
-    if (session) {
+    if (!session) {
         return {
             redirect: {
                 destination: '/',
@@ -25,6 +26,8 @@ export async function getServerSideProps(context: GetServerSidePropsContext): Pr
     }
 
     return {
-        props: {},
+        props: {
+            session,
+        },
     }
 }

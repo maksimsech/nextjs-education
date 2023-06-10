@@ -2,12 +2,9 @@ import type {
     GetServerSidePropsContext,
     GetServerSidePropsResult,
 } from 'next'
-import {
-    type Session,
-    getServerSession,
-} from 'next-auth'
+import { type Session } from 'next-auth'
 
-import { options } from './options'
+import { getServerSideSession } from './helpers'
 
 
 // TODO: Fix types
@@ -22,7 +19,7 @@ export async function withSession<T = any>(
     }
     // @ts-ignore
     const props: T & { session: Session | null } = result.props instanceof Promise ? await result.props : result.props
-    const session = await getServerSession(context.req, context.res, options)
+    const session = await getServerSideSession(context.req, context.res)
     props.session = session
 
     return result as unknown as Promise<GetServerSidePropsResult<T & { session: Session | null }>>

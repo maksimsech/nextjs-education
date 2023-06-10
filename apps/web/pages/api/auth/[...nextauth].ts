@@ -1,6 +1,6 @@
 import NextAuth from 'next-auth/next'
 
-import { options } from ':auth/options'
+import { options } from '@your-spot/auth'
 
 
 export default NextAuth(options)

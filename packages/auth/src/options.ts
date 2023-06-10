@@ -39,4 +39,15 @@ export const options = {
             }
         },
     })],
-} satisfies NextAuthOptions
+    callbacks: {
+        async jwt({ token, user }) {
+            if (user) {
+                token.email = user.email
+                token.sub = user.id
+                token.name = user.name
+            }
+
+            return token
+        },
+    },
+} as NextAuthOptions
