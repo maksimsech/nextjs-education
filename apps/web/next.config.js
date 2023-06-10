@@ -1,3 +1,5 @@
+// @ts-check
+
 /** @type {import('next').NextConfig} */
 // /** @type {import('node:fs')} */
 // const fs = require('node:fs')

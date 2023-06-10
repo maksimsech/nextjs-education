@@ -5,9 +5,9 @@ import type {
 } from 'next'
 import { useRouter } from 'next/router'
 
-import { CommentsSection } from '@components/comments/comments-section'
-import { PageTitle } from '@components/common'
-import { EventItem } from '@components/events/event-item'
+import { CommentsSection } from ':components/comments/comments-section'
+import { PageTitle } from ':components/common'
+import { EventItem } from ':components/events/event-item'
 import {
     createCommentFrom,
     createEventFrom,

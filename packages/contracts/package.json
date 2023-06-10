@@ -4,6 +4,6 @@
   "exports": "./src/index.ts",
   "private": true,
   "devDependencies": {
-    "typescript": "4.9.4"
+    "typescript": "^5.1.3"
   }
 }

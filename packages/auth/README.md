@@ -1,0 +1,1 @@
+As for now next-auth is monolith library and @auth/core(next) is in development next-auth need to be imported in web and auth projects.

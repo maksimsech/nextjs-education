@@ -3,7 +3,8 @@
   "exports": {
     ".": "./src/index.ts",
     "./creators": "./src/creators/index.ts",
-    "./data": "./src/data/index.ts"
+    "./data": "./src/data/index.ts",
+    "./services": "./src/data/index.ts"
   },
   "author": "Maksim Sech",
   "private": true,
@@ -15,6 +16,6 @@
     "@your-spot/database": "*"
   },
   "devDependencies": {
-    "typescript": "4.9.4"
+    "typescript": "^5.1.3"
   }
 }

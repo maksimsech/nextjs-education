@@ -1,18 +1,16 @@
-import {
-    FormEvent,
-    useState,
-} from 'react'
+import { FormEvent } from 'react'
 
-import {
-    Button,
-    TextField,
-} from '@mui/material'
 import SuperJSON from 'superjson'
 
 import {
     Comment,
     Event,
 } from '@your-spot/contracts'
+import {
+    Button,
+    TextField,
+    useInputState,
+} from '@your-spot/ui'
 import { trpc } from 'trpc'
 
 import './comment-form.scss'
@@ -27,8 +25,8 @@ export function CommentForm({
     event,
     onCommentAdded,
 }: CommentFormProps) {
-    const [author, setAuthor] = useState('')
-    const [text, setText] = useState('')
+    const [author, setAuthor, setAuthorValue] = useInputState('')
+    const [text, setText, setTextValue] = useInputState('')
 
     const context = trpc.useContext()
     // eslint-disable-next-line no-unused-vars
@@ -60,8 +58,8 @@ export function CommentForm({
             eventId: event.id,
         })
 
-        setAuthor('')
-        setText('')
+        setAuthorValue('')
+        setTextValue('')
 
         onCommentAdded()
     }
@@ -73,12 +71,12 @@ export function CommentForm({
         >
             <TextField
                 value={author}
-                onChange={e => setAuthor(e.target.value)}
+                onChange={setAuthor}
                 label='Author'
             />
             <TextField
                 value={text}
-                onChange={e => setText(e.target.value)}
+                onChange={setText}
                 label='Text'
                 multiline
                 maxRows={4}
